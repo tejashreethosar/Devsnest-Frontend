@@ -58,10 +58,10 @@ function most(arr) {
    for(keys in item) {
        if(item[keys] > freq){
        freq = item[keys];
-       times = keys;
+       result = keys;
        }
    }
-   console.log(`${freq} (${times} times)`)
+   console.log(`${result} (${freq} times)`)
 }
 most([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3])
 
