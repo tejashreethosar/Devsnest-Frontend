@@ -1,6 +1,5 @@
-/* 1. Write a JavaScript program to list the properties of a JavaScript object. Sample object: var student = { name : "David Rayy", sclass : "VI", rollno : 12 }; */
-
-Sample Output: name,sclass,rollno
+/* 1. Write a JavaScript program to list the properties of a JavaScript object. Sample object: var student = { name : "David Rayy", sclass : "VI", rollno : 12 }; 
+Sample Output: name,sclass,rollno*/
 
 var student = { name : "David Rayy", sclass : "VI", rollno : 12 };
 
@@ -56,16 +55,18 @@ console.log(vol(3,6));
 
 /* 6. Write a JavaScript program to sort an array of JavaScript objects.  Sample Object : var library = [ { title: 'The Road Ahead', author: 'Bill Gates', libraryID: 1254 }, { title: 'Walter Isaacson', author: 'Steve Jobs', libraryID: 4264 }, { title: 'Mockingjay: The Final Book of The Hunger Games', author: 'Suzanne Collins', libraryID: 3245 }]; Expected Output: [[object Object] { author: "Walter Isaacson", libraryID: 4264, title: "Steve Jobs" }, [object Object] { author: "Suzanne Collins", libraryID: 3245, title: "Mockingjay: The Final Book of The Hunger Games" }, [object Object] { author: "The Road Ahead", libraryID: 1254, title: "Bill Gates" }] */
 
-var library = [ 
-    { title: 'Walter Isaacson', author: 'Steve Jobs', libraryID: 4264 }, 
-    { title: 'The Road Ahead', author: 'Bill Gates', libraryID: 1254 },
-    { title: 'Book Hunger Games', author: 'Suzanne Collins', libraryID: 3245 },
-]; 
-
-function sort() {
-    var x = library.sort((a,b) => b.libraryID - a.libraryID )
-    return x;
-}
-console.log(sort());
+var library = [
+  { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
+  { title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
+  {
+    title: "Mockingjay: The Final Book of The Hunger Games",
+    author: "Suzanne Collins",
+    libraryID: 3245,
+  },
+];
+library.sort(function (obj1, obj2) {
+  return obj1.libraryID - obj2.libraryID;
+});
+console.log(library);
 
 // --------------------------------------------------------------------
