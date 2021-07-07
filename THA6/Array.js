@@ -11,8 +11,8 @@ function is_array(arr)  {
 // 2. Write a JavaScript function to clone an array
 
 function clone(arr) {
- return arr.slice(0);
-    };
+    return arr.slice(0);
+};
 console.log(clone([1, 2, 4, 0]));
 console.log(clone([1, 2, [4, 0]]));
 
@@ -36,8 +36,8 @@ console.log(first([7, 9, 0, -2],-3));
 
 function AtoS(input)
 {
-console.log(input.join(','));
-console.log(input.join('+'));
+    console.log(input.join(','));
+    console.log(input.join('+'));
 }
 AtoS(["Red", "Green", "White", "Black"]);
 
@@ -54,7 +54,7 @@ function most(arr) {
            item[i] = 1;
        }
    }
-    freq = 0;
+   freq = 0;
    for(keys in item) {
        if(item[keys] > freq){
        freq = item[keys];
