@@ -1,9 +1,9 @@
 // 1. Write a JavaScript function to check whether an `input` is an array or not
 
-function check(arr)  {
+function is_array(arr)  {
     return Array.isArray(arr);
  }
- console.log(check('w3resource'));
+ console.log(is_array('w3resource'));
  console.log(is_array([1, 2, 4, 0]));
 
 // ---------------------------------------------------
@@ -11,8 +11,8 @@ function check(arr)  {
 // 2. Write a JavaScript function to clone an array
 
 function clone(arr) {
- return arr.slice(0);
-    };
+    return arr.slice(0);
+};
 console.log(clone([1, 2, 4, 0]));
 console.log(clone([1, 2, [4, 0]]));
 
@@ -36,8 +36,8 @@ console.log(first([7, 9, 0, -2],-3));
 
 function AtoS(input)
 {
-console.log(input.join(','));
-console.log(input.join('+'));
+    console.log(input.join(','));
+    console.log(input.join('+'));
 }
 AtoS(["Red", "Green", "White", "Black"]);
 
@@ -54,14 +54,14 @@ function most(arr) {
            item[i] = 1;
        }
    }
-    freq = 0;
+   freq = 0;
    for(keys in item) {
        if(item[keys] > freq){
        freq = item[keys];
-       times = keys;
+       result = keys;
        }
    }
-   console.log(`${freq} (${times} times)`)
+   console.log(`${result} (${freq} times)`)
 }
 most([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3])
 
