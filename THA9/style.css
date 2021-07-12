@@ -1,0 +1,45 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  height: 520px;
+  width: 520px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board-status {
+  font-size: 2rem;
+  font-family: cursive;
+  width: 500px;
+  margin-bottom: 1rem;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cell {
+  height: 50px;
+  width: 50px;
+  margin: 1px;
+  background-color: maroon;
+}
+
+.cell:hover {
+  opacity: 0.8;
+}
