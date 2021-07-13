@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+:root {
+  --primaryPink: #d911a0;
+  --dark: #221f1f;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+  background: #000;
+  color: #999;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 50px 50px;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . .";
+}
+
+.showcase {
+  width: 100%;
+  height: 93vh;
+  position: relative;
+  background-color: var(--dark);
+  /* background: url("https://i.ibb.co/vXqDmnh/background.jpg") no-repeat center
+    center/cover; */
+}
+
+.moves {
+  color: var(--primaryPink);
+  font-family: "Bebas Neue";
+  letter-spacing: 1px;
+}
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 120px 100px 250px #000000 , inset -120px -100px 250px #000000;
+}
+
+.showcase-top {
+  position: relative;
+  z-index: 2;
+  height: 90px;
+}
+
+.showcase-top img {
+  width: 170px;
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  margin-left: 0;
+}
+.showcase-top div {
+  position: absolute;
+  top: 43%;
+  right: 9%;
+  font-size: 26px;
+}
+.showcase-top .head {
+  position: absolute;
+  top: 25%;
+  right: 39%;
+  font-size: 45px;
+  color: white;
+  font-family: "Roboto", cursive;
+}
+.showcase-top a {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+.heading {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
+  color: var(--primaryPink);
+}
+.frame {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1500px;
+  height: 700px;
+  margin-top: -350px;
+  margin-left: -750px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: visible;
+
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container {
+  width: 250px;
+  height: 100px;
+  position: relative;
+  -ms-perspective: 800px;
+  perspective: 800px;
+  border-radius: 4px;
+}
+.frontLogo {
+  width: 50px;
+}
+.card {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 6px;
+  box-shadow: -4px 15px 10px #e342b5;
+  cursor: pointer;
+}
+
+.front:hover {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-image: url(),
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 80%
+    );
+}
+
+.card div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  background: var(--dark);
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -o-box-pack: center;
+  justify-content: center;
+  -o-box-align: center;
+  align-items: center;
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #47525d;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  background-size: 30px;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+.card.flipped {
+  transform: rotateY(180deg);
+}
