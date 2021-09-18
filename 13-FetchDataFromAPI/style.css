@@ -22,10 +22,12 @@ body {
   padding: 30px 20px;
   margin-bottom: 20px;
 }
+
 #quote {
   color: rgb(0, 0, 0);
   text-align: center;
 }
+
 #author {
   float: right;
   color: brown;
